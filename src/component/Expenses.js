@@ -34,11 +34,11 @@ const Expenses = (props) => {
              <Col md={4}>
                 <Card style={{margin:'0.5rem', backgroundColor:"#3E8EDE", }} className="  text-white">
                    <Card.Body>
-            <Card.Title>Item & Services:{props.expenseData.name}</Card.Title>
+            <Card.Title>Item & Services:{props.expenseData.item}</Card.Title>
             <Card.Text>
-            <p>Date Purchased: {props.expenseData.contact}</p>
-            <p>Amount Paid: { props.expenseData.location}</p>
-            <p>Category: { props.expenseData.location}</p>
+            <p>Date Purchased: {props.expenseData.datePurchased}</p>
+            <p>Amount Paid: { props.expenseData.amountPaid}</p>
+            <p>Category: { props.expenseData.category}</p>
             </Card.Text>
              <Button onClick={handleShow} href="#"
                 style={{

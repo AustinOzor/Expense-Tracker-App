@@ -2,7 +2,7 @@
 let initialState = {
  expenses: [
     {id:'1',
-    item: "Groceries", datePurchase:"22-09-2022", amountPaid: "100", category:"Food"
+    item: "Groceries", datePurchased:"22-09-2022", amountPaid: "100", category:"Food"
     }
     
   
