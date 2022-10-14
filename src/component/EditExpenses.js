@@ -7,17 +7,15 @@ import { reduxEditExpense} from "../Actions/ExpensesAction";
     
 const EditExpenses = (props) => {
     const [item, setItem] = useState(props.expenseData.item)
-    const [date, setDate] = useState(props.expenseData.datePurchased)
-    const [amount, setAmountPaid] = useState(props.expenseData.amountPaid)
+    const [datePurchased, setDate] = useState(props.expenseData.datePurchased)
+    const [amountPaid, setAmountPaid] = useState(props.expenseData.amountPaid)
     const [category, setCategory] = useState(props.expenseData.category)
 
-    const handleChange = (e) => {
-        setItem(e.target.value);
-    };
+   
      const handleEdit = (e) => {
          e.preventDefault()
          
-         let newInfo = { id: props.expenseData.id, item, date, amount,category };
+         let newInfo = { id: props.expenseData.id, item, datePurchased, amountPaid, category };
          props.reduxEditExpense(newInfo)
       //   props.editUser(props.userData.id, { name, contact, location });
 
@@ -40,16 +38,18 @@ const EditExpenses = (props) => {
               
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Contact</Form.Label>
-                <Form.Control type="date" placeholder="date" value={date} onChange={handleChange} />
+                <Form.Label>Date Purchased</Form.Label>
+               <Form.Control type="date" placeholder="date" value={datePurchased} onChange={(e) => {
+                   setDate(e.target.value);
+                }} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Amount</Form.Label>
-               <Form.Control type="text" placeholder="Location" value={amount}
+               <Form.Control type="text" placeholder="Location" value={amountPaid}
                    onChange={(e) => {
                        setAmountPaid(e.target.value);
-                       console.log(amount)
+                       console.log(amountPaid)
                }} />
             </Form.Group>
               <Form.Group style={{width: "300px", marginLeft:"50px"}} className="mb-3" controlId="formBasicEmail">

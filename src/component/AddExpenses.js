@@ -40,7 +40,7 @@ const AddExpenses = (props) => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Amount</Form.Label>
+                <Form.Label>Amount $</Form.Label>
                <Form.Control type="text" placeholder="amount ($)" value={amountPaid}
                    onChange={(e) => {
                        setAmountPaid(e.target.value);

@@ -37,7 +37,7 @@ const Expenses = (props) => {
             <Card.Title>Item & Services:{props.expenseData.item}</Card.Title>
             <Card.Text>
             <p>Date Purchased: {props.expenseData.datePurchased}</p>
-            <p>Amount Paid: { props.expenseData.amountPaid}</p>
+            <p>Amount Paid ($): { props.expenseData.amountPaid}</p>
             <p>Category: { props.expenseData.category}</p>
             </Card.Text>
              <Button onClick={handleShow} href="#"
